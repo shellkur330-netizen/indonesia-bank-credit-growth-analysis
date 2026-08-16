@@ -1,4 +1,3 @@
-
 install.packages("readr")
 install.packages("tseries")
 install.packages("lmtest")
@@ -13,7 +12,7 @@ library(tseries)
 library(urca)
 library(lmtest)
 
-path_file <- "C:/Users/Janice Jayadi/Downloads/Data Gabungan Jurnal.xlsx"
+path_file <- "D:/SEMESTER 4/MAKRO/Data Gabungan Jurnal.xlsx"
 data <- read_excel(path_file)
 data_clean <- na.omit(data)
 
@@ -86,3 +85,4 @@ plot(irf_credit)
 fevd_hasil <- fevd(var_from_vecm, n.ahead = 10)
 # Lihat kontribusi khusus untuk Credit
 print(fevd_hasil$credit)
+
